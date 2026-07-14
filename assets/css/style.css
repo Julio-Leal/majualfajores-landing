@@ -16,8 +16,45 @@ body {
 }
 
 header {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
     background-color: var(--primary);
 }
-container-logo img {
 
+.container-logo {
+    margin-right: 150px;
+}
+
+.nav-menu {
+    margin-left: 150px;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu ul li a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+main {}
+
+.hero {
+    display: flex;
+    align-items: center;
+    color: var(--background);
+    background-color: var(--primary);
+}
+
+.hero h1 {
+    font-size: 55px;
+}
+
+.hero h2 {
+    font-size: 25px;
 }
