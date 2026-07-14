@@ -23,7 +23,7 @@ header {
 }
 
 .nav-menu ul li a {
-    color: #ffff;
+    color: var(--conventional-background);
     text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ main {}
     padding: 25px;
     align-items: center;
     justify-content: center;
-    color: var(--background);
+    color: var(--conventional-background);
     background-color: var(--secondary);
 }
 
@@ -72,8 +72,46 @@ main {}
 }
 
 .forma-pagamento {
-    background-color: ;
+    display: flex;
+    gap: 25px;
+    padding: 25px 0;
+    justify-content: center;
 }
 
+.opcao-pagamento {
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    background-color: var(--conventional-background);
+}
+
+.opcao-pagamento #title1 {
+    color: var(--success);
+    font-size: 25px;
+}
+
+.opcao-pagamento #title2 {
+    font-size: 25px;
+    color: var(--primary)
+}
+
+.organizer1 {
+    display: flex;
+}
+
+.payment-details span {
+    display: block;
+}
+
+.qrcode-box {
+    background-color: red;
+}
+
+.qrcode-box img {
+    width: 200px;
+}
 
 /*END MAIN*/
