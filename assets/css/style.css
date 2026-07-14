@@ -1,35 +1,20 @@
-/*
-Estilos gerais.
-
-Body.
-
-Cards.
-
-Header.
-
-Footer.
-
-Botões.
-*/
 body {
-
+    background-color: var(--background);
 }
+
+/*HEADER*/
 
 header {
     display: flex;
-    height: auto;
     align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid black;
+    justify-content: space-between;
+    border-bottom: 1px black;
+    padding: 0 150px;
     background-color: var(--primary);
 }
 
-.container-logo {
-    margin-right: 150px;
-}
-
-.nav-menu {
-    margin-left: 150px;
+.container-logo img  {
+    width: 80px;
 }
 
 .nav-menu ul {
@@ -42,19 +27,53 @@ header {
     text-decoration: none;
 }
 
+/*END HEADER*/
+
+/*MAIN*/
+
 main {}
 
 .hero {
     display: flex;
+    padding: 25px;
     align-items: center;
+    justify-content: center;
     color: var(--background);
-    background-color: var(--primary);
+    background-color: var(--secondary);
 }
 
-.hero h1 {
+.hero-img {
+    margin-right: 75px;
+}
+
+.hero-img img {
+    width: 500px;
+}
+
+.hero-text {
+    margin-left: 75px;
+}
+
+.hero-text h1 {
     font-size: 55px;
+    text-align: justify;
+    margin-bottom: 15px;
 }
 
-.hero h2 {
-    font-size: 25px;
+.hero-text h2 {
+    font-size: 35px;
+    text-align: justify;
+    margin-bottom: 25px;
 }
+
+.hero-text h3 {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.forma-pagamento {
+    background-color: ;
+}
+
+
+/*END MAIN*/
