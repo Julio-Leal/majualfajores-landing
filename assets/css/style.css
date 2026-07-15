@@ -3,7 +3,7 @@ body {
     align-items: center;
     height: 100vh;
     justify-content: center;
-    background-color: var(--background);
+    background-color: transparent;
 }
 
 main {
@@ -11,6 +11,7 @@ main {
     width: 50vw;
     border-radius: 25px;
     border: 1px solid black;
+    background-color: var(--background);
 }
 
 .logo {
@@ -19,17 +20,38 @@ main {
     justify-content: center;
 }
 
+.logo img {
+    width: 150px;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: green;
+    background-color: transparent;
 }
 
 .container-pagamento {
     display: flex;
     flex-direction: column;
     background-color: var(--conventional-background);
+}
+
+.pagamento-pix .container-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 10px;
+    color: var(--conventional-background);
+}
+
+.pagamento-pix .icon-pix img {
+    width: 32px;
+}
+
+.pagamento-pix .hero-pix {
+    
 }
