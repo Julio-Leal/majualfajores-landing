@@ -1,75 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maju Alfajores</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/variables.css">
-    
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+    
     <main>
-        <div class="logo">
-            <img src="assets/images/Maju/logos-png/logotransparent-2000px-png.png" alt="logo">
-        </div>
-        <div class="hero">
-            <h2>Obrigado!</h2>
-            <p>Seu apoio faz nosso trabalho <br> 
-               ser ainda mais doce.
-            </p>
-            <h3>Como você prefere pagar?</h3>
-        </div>
-        <section class="container-pagamento">
-        <div class="pagamento-pix">
-            <div class="container-title">
-                <div class="icon-pix">
-                    <img src="assets/images/pix/pix.png" alt="pix-icon">
-                </div>
-                <div class="hero-pix">
-                    <h2>PAGAR AGORA VIA PIX</h2>
-                    <p>Valor: R$6,00</p>
-                </div>
+
+        <img id="background-img-main" src="assets/images/background/Design sem nome.png" alt="">
+
+        <!-- Hero -->
+        <section class="hero">
+            
+            <div class="logo">
+                <img src="assets/images/Maju/logos-png/logotransparent-2000px-cut-png.png"
+                    alt="Logo Maju Alfajores">
             </div>
 
-            <div class="container-qrcode">
-                <p>Escaneie o QR Code para pagar <br>
-                   com o app do seu banco.
-                </p>
+            <div class="hero-content">
+                <h1>Obrigado!</h1>
 
-                <img src="assets/images/qrcode/Screenshot_2.png" alt="temp-qrcode">
-            </div>
-        </div>
-        
-        <div class="divider">
-            <span>OU</span>
-        </div>
-
-        <div class="pagamento-posterior">
-            <div class="container-title">
-                <h2>PAGAR DEPOIS</h2>
                 <p>
-                    Preencha seus dados que entraremos <br>
-                    em contato para cobrança.
+                    Seu apoio faz nosso trabalho
+                    <br>
+                    ser ainda mais doce.
                 </p>
+
+                <h2>Como você prefere pagar?</h2>
             </div>
 
-            <form action="">
-                <label for="">Nome completo</label>
-                <input type="text">
-                <label for="">WhatsApp</label>
-                <input type="number">
-                <label for="">Quantidade</label>
-                <input type="number">
+        </section>
 
-                <button>
-                    <img src="" alt="send-icon">
-                    Enviar
-                </button>
-            </form>
-        </div>
-    </section>
+        <!-- Pagamentos -->
+        <section class="payment">
+
+            <!-- PIX -->
+            <article class="payment-card">
+
+                <header class="payment-card__header">
+
+                    <div class="payment-card__icon">
+                        <img src="assets/images/pix/pix.png"
+                            alt="Ícone do PIX">
+                    </div>
+
+                    <div class="payment-card__title">
+                        <h2>Pagar agora via PIX</h2>
+                        <p>Valor: <strong>R$ 6,00</strong></p>
+                    </div>
+
+                </header>
+
+                <div class="payment-card__body">
+
+                    <p>
+                        Escaneie o QR Code para pagar
+                        <br>
+                        com o aplicativo do seu banco.
+                    </p>
+
+                    <figure class="qrcode">
+                        <img src="assets/images/qrcode/mp-qrcode.jpeg"
+                            alt="QR Code para pagamento via PIX">
+                    </figure>
+
+                    <button id="btn-copy-pix">
+                        <img src="assets/images/pix/pix icon white.svg" alt="">
+                        Copiar chave PIX
+                    </button>
+                </div>
+
+            </article>
+
+            <!-- Divisor -->
+            <div class="divider">
+                <span>OU</span>
+            </div>
+
+            <!-- Formulário -->
+            <article class="payment-card">
+
+                <header class="payment-card__header">
+
+                    <div class="payment-card__icon">
+                        <img src="assets/images/formulario/formulario-de-contato.png"
+                            alt="ícone Formulário">
+                    </div>
+
+                    <div class="payment-card__title">
+                        <h2>Pagar depois</h2>
+
+                        <p>
+                            Preencha seus dados e entraremos
+                            <br>
+                            em contato para cobrança.
+                        </p>
+                    </div>
+
+                </header>
+
+                <form class="payment-form">
+
+                    <div class="form-group">
+                        <label for="name">Nome completo</label>
+                        <input
+                            id="nome"
+                            type="text"
+                            placeholder="Digite seu nome"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">WhatsApp</label>
+                        <input
+                            id="whatsapp"
+                            type="tel"
+                            placeholder="(44) 99999-9999"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantidade</label>
+                        <input
+                            id="quantidade"
+                            type="number"
+                            min="1"
+                            placeholder="Quantidade de alfajores"
+                            required>
+                    </div>
+
+                    <button id="btn-enviar" type="submit" class="btn-send">
+
+                        <img src="assets/images/icons/send.svg"
+                            alt=""
+                            aria-hidden="true">
+
+                        <span>Enviar</span>
+
+                    </button>
+
+                </form>
+
+            </article>
+
+        </section>
+
     </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/formulario.js"></script>
+    <script src="assets/js/config.js"></script>
+
 </body>
+
 </html>

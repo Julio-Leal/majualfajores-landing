@@ -1,138 +1,296 @@
-
+/* ==========================================================
+   BASE
+========================================================== */
 
 body {
     display: flex;
-    align-items: center;
-    height: 100vh;
     justify-content: center;
+
+    min-height: 100vh;
+
     background-color: transparent;
+    font-family: "Roboto", sans-serif;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     width: 600px;
     height: auto;
-    align-items: center;
-    border-radius: 25px;
-    box-shadow: 0 0 5px 1px grey;
+
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+
     background-color: var(--background);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#background-img-main {
+    position: absolute;
+    z-index: 1;
+    width: 600px;
 }
 
-.logo img {
-    width: 200px;
-}
+/* ==========================================================
+   HERO
+========================================================== */
 
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    gap: 10px;
+
     text-align: center;
-    background-color: transparent;
+    z-index: 2;
 }
 
-.hero h2 {
-    font-weight: bold;
-    font-size: 40px;
-    color: var(--primary);
-}
-
-.hero p {
-    color: var(--primary);
-}
-
-.hero h3 {
-    color: var(--rose);
-}
-
-.container-pagamento {
+.logo {
     display: flex;
-    width: 80%;
-    flex-direction: column;
-    background-color: var(--background);
-}
-
-.pagamento-pix {
-    background-color: var(--ternary);
-    border-radius: 25px;
-    border: 1px solid var(--secondary);
-}
-
-.pagamento-pix .container-title {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: var(--primary);
-    border-radius: 25px;
-    color: var(--conventional-background);
+    align-items: center;
+    
 }
 
-.pagamento-pix .icon-pix img {
+.logo img {
+    width: 180px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.hero-content p {
+    line-height: 1.5;
+    color: var(--primary);
+}
+
+.hero-content h2 {
+    color: var(--rose);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* ==========================================================
+   PAYMENT
+========================================================== */
+
+.payment {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin: 40px 0;
+}
+
+/* ==========================================================
+   PAYMENT CARD
+========================================================== */
+
+.payment-card {
+    overflow: hidden;
+
+    border: 1px solid var(--secondary);
+    border-radius: 15px;
+
+    background-color: var(--ternary);
+}
+
+/* ==========================================================
+   CARD HEADER
+========================================================== */
+
+.payment-card__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    color: var(--conventional-background);
+    background-color: var(--primary);
+}
+
+.payment-card__icon {
+    margin-right: 20px;
+}
+
+.payment-card__icon img {
     width: 42px;
 }
 
-.pagamento-pix .container-qrcode {
+.payment-card__title h2 {
+    margin-bottom: 5px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.payment-card__title p {
+    font-size: 1.15rem;
+}
+
+/* ==========================================================
+   QR CODE
+========================================================== */
+
+.payment-card__body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
     text-align: center;
-    justify-content: center;
 }
 
-/*divider*/
+.qrcode {
+    
+}
 
-.divider {
-    position: relative;
+.qrcode img {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.payment-card__body button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
+    margin-top: 10px;
+    padding: 14px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: white;
+    font-weight: 600;
+
+    background-color: var(--success);
+
+    transition: .3s;
+}
+
+.payment-card__body button:hover {
+    background-color: var(--secondary);
+}
+
+.payment-card__body button img {
+    width: 16px;
+    margin-right: 5px;
+}
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.divider {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 35px 0;
 }
 
 .divider::before {
     content: "";
+
     position: absolute;
+
     width: 100%;
     height: 1px;
-    background-color: #e7cfc2;
+
+    background-color: #E7CFC2;
 }
 
 .divider span {
     position: relative;
     z-index: 1;
-    width: 42px;
-    height: 42px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: #FFF5EF;
-    border: 2px solid #e7cfc2;
+    width: 42px;
+    height: 42px;
+
+    border: 2px solid #E7CFC2;
     border-radius: 50%;
 
-    font-size: 13px;
+    background-color: #FFF5EF;
+
+    font-size: .85rem;
     font-weight: 600;
-    color: #9b6341;
+    color: var(--secondary);
+
     text-transform: uppercase;
 }
 
-/*divider*/
+/* ==========================================================
+   FORM
+========================================================== */
 
-.pagamento-posterior {
-    border-radius: 10px;
-    border: 1px solid var(--secondary);
-    background-color: var(--ternary);
-}
-
-.pagamento-posterior .container-title {
+.payment-form {
     display: flex;
     flex-direction: column;
-    text-align: center;
+
+    gap: 15px;
+
+    padding: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment-form label {
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.payment-form input {
+    padding: 12px;
+
+    border: 1px solid #D8C1B5;
+    border-radius: 8px;
+
+    font-size: .95rem;
+}
+
+.payment-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.payment-form button {
+    margin-top: 10px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    color: white;
+    font-weight: 600;
+
+    background-color: var(--primary);
+
+    transition: .3s;
+}
+
+.payment-form button:hover {
+    background-color: var(--secondary);
 }
