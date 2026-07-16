@@ -24,11 +24,27 @@ async function enviarFormulario(event) {
         const json = await resposta.json();
 
         if(json.sucesso) {
-            alert("Dados enviados com sucesso!");
+            Swal.fire({
+                icon: 'success',
+                title: 'Dados enviados com sucesso!',
+                text: 'Obrigado por sua compra ❤',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#8B5E3C',
+                background: '#2b1d16',
+                color: '#fff'
+            });
             FORMULARIO.reset();
         }
     } catch(erro) {
-        alert("Erro ao enviar os dados.");
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro ao enviar os dados!',
+                text: 'Ocorreu um problema durante o envio. Tente novamente.',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#8B5E3C',
+                background: '#2b1d16',
+                color: '#fff'
+            });
         console.error(erro);
     }
 }
