@@ -8,7 +8,7 @@ body {
 
     min-height: 100vh;
 
-    background-color: transparent;
+    background-color: var(--primary);
     font-family: "Roboto", sans-serif;
 }
 
@@ -21,7 +21,7 @@ main {
     height: auto;
 
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 15px;
 
     background-color: var(--background);
 }
@@ -295,6 +295,11 @@ main {
     background-color: var(--secondary);
 }
 
+.payment-form button img {
+    width: 16px;
+    margin-right: 5px;
+}
+
 /* ==========================================================
    TABLETS
 ========================================================== */
@@ -328,7 +333,7 @@ main {
     }
 
     #background-img-main {
-        display: none;
+        width: 90%;
     }
 
     .logo img {
