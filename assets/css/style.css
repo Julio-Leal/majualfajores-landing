@@ -294,3 +294,218 @@ main {
 .payment-form button:hover {
     background-color: var(--secondary);
 }
+
+/* ==========================================================
+   TABLETS
+========================================================== */
+
+@media (max-width: 1024px) {
+
+    main {
+        width: 90%;
+    }
+
+    #background-img-main {
+        width: 90%;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLETS E CELULARES
+========================================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    main {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    #background-img-main {
+        display: none;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .hero {
+        padding: 25px 20px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-content p {
+        font-size: .95rem;
+    }
+
+    .payment {
+        width: 92%;
+        margin: 30px 0;
+    }
+
+    .payment-card__header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .payment-card__icon {
+        margin-right: 0;
+    }
+
+    .payment-card__title h2 {
+        font-size: 1.2rem;
+    }
+
+    .payment-card__title p {
+        font-size: 1rem;
+    }
+
+    .payment-card__body {
+        padding: 20px;
+    }
+
+    .qrcode img {
+        width: 180px;
+    }
+
+    .payment-card__body button {
+        width: 100%;
+    }
+
+    .payment-form {
+        padding: 20px;
+    }
+
+    .payment-form button {
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================================
+   SMARTPHONES
+========================================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    main {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .hero {
+        gap: 8px;
+        padding: 20px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+
+    .hero-content p {
+        font-size: .9rem;
+        line-height: 1.4;
+    }
+
+    .payment {
+        width: 95%;
+        margin: 20px 0;
+    }
+
+    .payment-card {
+        border-radius: 12px;
+    }
+
+    .payment-card__header {
+        padding: 18px;
+    }
+
+    .payment-card__icon img {
+        width: 36px;
+    }
+
+    .payment-card__title h2 {
+        font-size: 1.05rem;
+    }
+
+    .payment-card__title p {
+        font-size: .9rem;
+    }
+
+    .payment-card__body {
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .payment-card__body p {
+        font-size: .9rem;
+    }
+
+    .qrcode img {
+        width: 160px;
+    }
+
+    .payment-card__body button {
+        width: 100%;
+        padding: 12px;
+        font-size: .95rem;
+    }
+
+    .divider {
+        margin: 25px 0;
+    }
+
+    .divider span {
+        width: 36px;
+        height: 36px;
+        font-size: .75rem;
+    }
+
+    .payment-form {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .payment-form label {
+        font-size: .9rem;
+    }
+
+    .payment-form input {
+        padding: 10px;
+        font-size: .9rem;
+    }
+
+    .payment-form button {
+        width: 100%;
+        padding: 12px;
+        font-size: .95rem;
+    }
+
+}
