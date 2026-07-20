@@ -8,6 +8,18 @@ async function enviarFormulario(event) {
     
     event.preventDefault();
 
+    //alteração 20-07-2026
+    Swal.fire({
+        icon: 'success',
+        title: 'Dados enviados com sucesso!',
+        text: 'Obrigado por sua compra ❤',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#8B5E3C',
+        background: '#2b1d16',
+        color: '#fff'
+    });
+    //alteração 20-07-2026
+
     const DADOS = {
         nome: document.getElementById("nome").value,
         whatsapp: document.getElementById("whatsapp").value, 
@@ -24,15 +36,6 @@ async function enviarFormulario(event) {
         const json = await resposta.json();
 
         if(json.sucesso) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Dados enviados com sucesso!',
-                text: 'Obrigado por sua compra ❤',
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#8B5E3C',
-                background: '#2b1d16',
-                color: '#fff'
-            });
             FORMULARIO.reset();
         }
     } catch(erro) {
