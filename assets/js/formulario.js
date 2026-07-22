@@ -1,22 +1,12 @@
 const URL_API = "https://script.google.com/macros/s/AKfycbwHA0IDBW-jrWm2O8CTFqxH4mG-cVEjSh2R1Na6T2Q7vbHU6EB2dnmB6iEZTKSVXTHY/exec";
 
 const FORMULARIO = document.querySelector("form");
-const BOTAO = FORMULARIO.querySelector("button[type='submit']");
-
-let enviando = false;
 
 FORMULARIO.addEventListener("submit", enviarFormulario);
 
 async function enviarFormulario(event) {
     
     event.preventDefault();
-
-    // Impede envio duplo
-    if(enviando)
-        return;
-
-    enviando = true;
-    BOTAO.disabled = true;
     
     // Modal de carregamento funcionando***
     Swal.fire({
@@ -74,4 +64,6 @@ async function enviarFormulario(event) {
             });
         console.error(erro);
     }
+
+    console.log("clicado formulário");
 }
